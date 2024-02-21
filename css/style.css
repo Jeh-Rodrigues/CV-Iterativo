@@ -1,0 +1,122 @@
+/* IMPORTS */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap');
+
+/* GLOBAL */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #101728;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    color: #fff;
+    margin: 5rem;
+    padding: 5rem;    
+    border: 1px solid #9340ff;
+    border-radius: 1rem;
+}
+
+.main {
+    margin: 5rem;
+    padding: 5rem;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    justify-content: space-around;    
+}
+
+.header .foto {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 100px rgb(229, 21, 233, 0.7);
+    background: radial-gradient(circle, rgba(229, 21, 233, 1) 0%, rgba(229, 21, 233, 1) 50%, rgba(243, 80, 255, 0.8566614145658263) 100%);
+}
+
+.information p {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 1.1rem;
+}
+
+.information p::before {
+    content: '';
+    display: inline-block;    
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: .5rem;
+}
+
+.information .job::before {
+    background-image: url('../assets/icons/job.png');
+}
+
+.information .location::before {
+    background-image: url('../assets/icons/localização.png');
+}
+
+.information .phone::before {
+    background-image: url('../assets/icons/whatsapp.png');
+}
+
+.information .email::before {
+    background-image: url('../assets/icons/email.png');
+}
+
+/* ACORDEON */
+.acordeon {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 1rem 0;
+    border: 1px solid #9340ff;
+    border-radius: 1rem;
+}
+
+.acordeon .trigger {    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 1rem 2rem;
+    background-color: transparent;
+    color: #fff;    
+    border: none;
+    transition: 1s;
+}
+
+.acordeon .trigger:hover {
+    cursor: pointer;
+    color: #9340ff;
+}
+
+.acordeon .trigger::after {
+    content: '';
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-repeat: no-repeat;
+    background-size: contain; 
+    background-image: url('../assets/icons/arrow-top.png');
+}
+
+.acordeon.open .trigger::after{
+    transform: rotate(180deg);
+}
+
+.acordeon .content {
+    display: none;
+}
+
+.acordeon.open .content {
+    display: inline;
+}
