@@ -34,4 +34,8 @@
     grid-template-columns: 1fr 1fr;
   }
 
+  .skills .tools ul li img{
+    max-width: 80px;
+  }
+
 }
