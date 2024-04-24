@@ -89,11 +89,19 @@ a {
     background-image: url('../img/icons/whatsapp.png');
 }
 
+.information .linkedin::before {
+    background-image: url('../img/icons/linkedin.png');
+}
+
 .information .email::before {
     background-image: url('../img/icons/email.png');
 }
 
 .information .phone a:hover {
+    color: #9340ff;
+}
+
+.information .linkedin a:hover {
     color: #9340ff;
 }
 
